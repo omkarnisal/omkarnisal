@@ -30,6 +30,7 @@ const domains: Domain[] = [
       'Industry 4.0 Architectures',
       'Industrial Networks & Protocols',
       'Data Acquisition Systems (DAQ)',
+      'Mechanical-to-Electronic Integration (Carburetors, ADC, Standards)',
     ]
   },
   {

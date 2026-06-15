@@ -50,7 +50,7 @@ const items: TimelineItem[] = [
   {
     id: 'btech',
     role: 'Bachelor of Technology, Electronics and Telecommunication',
-    organization: 'University Studies',
+    organization: 'SPPU',
     period: '2020 - 2024',
     description: 'Acquired foundational training in electronics, hardware circuits, and programming.',
     technologies: ['C', '8051/ARM Microcontrollers', 'Network Theory', 'Signal Processing'],
