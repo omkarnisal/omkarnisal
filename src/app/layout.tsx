@@ -30,7 +30,7 @@ export default function RootLayout({
             <Link href="/journey" className="hover:text-neutral-900 hover:underline">[journey]</Link>
             <Link href="/engineering" className="hover:text-neutral-900 hover:underline">[engineering]</Link>
             <Link href="/projects" className="hover:text-neutral-900 hover:underline">[projects]</Link>
-            <Link href="/building-instead" className="hover:text-neutral-900 hover:underline">[building instead]</Link>
+            <Link href="/building-rn" className="hover:text-neutral-900 hover:underline">[building rn]</Link>
             <Link href="/lab" className="hover:text-neutral-900 hover:underline">[lab]</Link>
             <Link href="/writing" className="hover:text-neutral-900 hover:underline">[writing]</Link>
             <Link href="/contact" className="hover:text-neutral-900 hover:underline">[contact]</Link>

@@ -6,8 +6,8 @@ export default function AiDeskCompanionPage() {
     <div className="space-y-8 py-4 max-w-xl">
       <section className="space-y-2">
         <div className="text-xs font-mono text-neutral-400">
-          <Link href="/building-instead" className="underline hover:text-neutral-900">
-            ← Back to Building Instead
+          <Link href="/building-rn" className="underline hover:text-neutral-900">
+            ← Back to Building RN
           </Link>
         </div>
         <h1 className="text-xl font-bold tracking-tight text-neutral-900 font-mono">

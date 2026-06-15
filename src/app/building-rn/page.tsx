@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function BuildingInsteadPage() {
+export default function BuildingRnPage() {
   return (
     <div className="space-y-8 py-4 max-w-xl">
       <section className="space-y-2">
         <h1 className="text-xl font-bold tracking-tight text-neutral-900 font-mono">
-          Building Instead
+          Building RN
         </h1>
         <p className="text-sm text-neutral-500 font-mono">
           A log of projects currently under active construction and prototyping:
@@ -29,7 +29,7 @@ export default function BuildingInsteadPage() {
         </p>
 
         <div className="pt-2 text-sm font-mono">
-          <Link href="/building-instead/ai-desk-companion" className="underline text-neutral-500 hover:text-neutral-900">
+          <Link href="/building-rn/ai-desk-companion" className="underline text-neutral-500 hover:text-neutral-900">
             [Read technical blueprint & details →]
           </Link>
         </div>
