@@ -19,17 +19,17 @@ const projects: Project[] = [
     technologies: ['Python', 'YOLO (Ultralytics)', 'OpenCV', 'Image & Video Processing'],
     learnings: ['Engineered frame-level bounding check math', 'Optimized multi-threaded frame queue ingestion', 'Secured peer-reviewed research publication'],
     status: 'Completed',
-    github: 'https://github.com',
+    github: 'https://github.com/omkarnisal',
     telemetryRef: 'CV_VIOLATION_DETECTOR_X1'
   },
   {
-    title: 'Edge AI Data Stream Preprocessor',
+    title: 'Control Systems & Simulation Engineering',
     category: 'Professional',
-    overview: 'Developed local telemetry capture pipelines for continuous industrial sensors at TCS. Implemented low-footprint data preprocessing and feature extraction algorithms prior to cloud syncing.',
-    technologies: ['Python', 'Node.js', 'REST APIs', 'MQTT', 'Linux Systems'],
-    learnings: ['Designed local error-buffering when offline', 'Maximized message throughput of resource-constrained hardware', 'Standardized backend schema integration'],
+    overview: 'Developed simulation models and verified control systems algorithms. Supported software-in-the-loop validation, modeling system dynamics, and running test diagnostics.',
+    technologies: ['C++', 'MATLAB', 'Simulink', 'Embedded Systems', 'Control Systems', 'AWS'],
+    learnings: ['Designed and validated mathematical models for physical system dynamics', 'Constructed test pipelines to simulate hardware controls under varying parameters', 'Analyzed diagnostic logs and optimized performance metrics'],
     status: 'Completed',
-    telemetryRef: 'TCS_EDGE_INGEST_P3'
+    telemetryRef: 'TCS_CONTROL_SIM_P3'
   },
   {
     title: 'B2B Lead Score Predictor & Funnel Analyzer',
@@ -47,7 +47,7 @@ const projects: Project[] = [
     technologies: ['ESP32', 'FreeRTOS', 'Embedded C', 'MQTT', 'I2C/SPI Sensor Drivers'],
     learnings: ['Configured low-power sleep schedules to extend life cycles', 'Tested connection buffering for weak WiFi fields', 'Programmed hardware interrupts'],
     status: 'Building',
-    github: 'https://github.com',
+    github: 'https://github.com/omkarnisal',
     telemetryRef: 'LAB_ESP32_TELEMETRY'
   },
   {
@@ -57,7 +57,7 @@ const projects: Project[] = [
     technologies: ['STM32 (Cortex-M4)', 'Embedded C', 'Keil uVision', 'CAN / SPI / I2C Bus'],
     learnings: ['Debugged bus clock timing offsets', 'Programmed DMA transfers to free CPU load', 'Built direct hardware register map APIs'],
     status: 'Testing',
-    github: 'https://github.com',
+    github: 'https://github.com/omkarnisal',
     telemetryRef: 'LAB_STM32_CONTROLLER'
   },
   {
@@ -67,7 +67,7 @@ const projects: Project[] = [
     technologies: ['Python', 'Pandas', 'Plotly', 'ML Classification', 'Web Scraping'],
     learnings: ['Gathering disparate financial datasets from web endpoints', 'Correlating performance statistics with wage spending metrics', 'Interactive dashboard layouts'],
     status: 'Planning',
-    github: 'https://github.com',
+    github: 'https://github.com/omkarnisal',
     telemetryRef: 'FOOTBALL_FINANCE_M1'
   }
 ];
@@ -78,10 +78,10 @@ export default function ProjectsPage() {
   return (
     <div className="space-y-8 py-4 max-w-xl">
       <section className="space-y-2">
-        <h1 className="text-xl font-bold tracking-tight text-neutral-900">
+        <h1 className="text-xl font-bold tracking-tight text-neutral-900 font-mono">
           Projects Directory
         </h1>
-        <p className="text-xs text-neutral-500 font-mono">
+        <p className="text-sm text-neutral-500 font-mono">
           Index of corporate edge deployments, research models, and bare-metal controllers:
         </p>
       </section>
@@ -95,15 +95,15 @@ export default function ProjectsPage() {
               ## {cat} Projects
             </h2>
 
-            <div className="space-y-6 font-mono text-xs">
+            <div className="space-y-6 font-mono text-sm">
               {catProjects.map((project) => (
                 <div key={project.title} className="space-y-2">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline border-b border-neutral-100 pb-1">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline border-b border-neutral-100 pb-1 font-mono">
                     <span className="font-bold text-neutral-800">{project.title}</span>
-                    <span className="text-neutral-400 font-normal shrink-0">[{project.status}]</span>
+                    <span className="text-neutral-500 font-normal shrink-0">[{project.status}]</span>
                   </div>
 
-                  <div className="text-[10px] text-neutral-400 uppercase tracking-widest">
+                  <div className="text-xs text-neutral-400 uppercase tracking-widest font-mono">
                     REF: {project.telemetryRef}
                   </div>
 
@@ -111,14 +111,14 @@ export default function ProjectsPage() {
                     {project.overview}
                   </p>
 
-                  <div className="pt-2 space-y-1">
+                  <div className="pt-2 space-y-2">
                     <div>
-                      <span className="text-[10px] text-neutral-400 uppercase block">STACK:</span>
-                      <span className="text-neutral-600 block">{project.technologies.join(' // ')}</span>
+                      <span className="text-xs text-neutral-400 uppercase block font-mono">STACK:</span>
+                      <span className="text-neutral-600 block text-xs font-mono">{project.technologies.join(' // ')}</span>
                     </div>
                     <div>
-                      <span className="text-[10px] text-neutral-400 uppercase block">KEY CHALLENGES:</span>
-                      <ul className="list-disc pl-4 text-neutral-600 font-sans text-xs space-y-0.5 pt-0.5">
+                      <span className="text-xs text-neutral-400 uppercase block font-mono">KEY CHALLENGES:</span>
+                      <ul className="list-disc pl-4 text-neutral-600 font-sans text-xs space-y-1 pt-0.5">
                         {project.learnings.map((l, i) => (
                           <li key={i}>{l}</li>
                         ))}
@@ -127,7 +127,7 @@ export default function ProjectsPage() {
                   </div>
 
                   {project.github && (
-                    <div className="pt-2">
+                    <div className="pt-2 font-mono text-xs">
                       <a href={project.github} className="underline text-neutral-800 hover:text-neutral-500" target="_blank" rel="noreferrer">
                         [view_on_github]
                       </a>

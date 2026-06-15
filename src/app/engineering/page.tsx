@@ -61,10 +61,10 @@ export default function EngineeringPage() {
   return (
     <div className="space-y-8 py-4 max-w-xl">
       <section className="space-y-2">
-        <h1 className="text-xl font-bold tracking-tight text-neutral-900">
+        <h1 className="text-xl font-bold tracking-tight text-neutral-900 font-mono">
           Engineering Domains
         </h1>
-        <p className="text-xs text-neutral-500 font-mono">
+        <p className="text-sm text-neutral-500 font-mono">
           Structured log of expertise areas and integrated systems:
         </p>
       </section>
@@ -75,14 +75,14 @@ export default function EngineeringPage() {
         {domains.map((domain) => (
           <div key={domain.title} className="space-y-2">
             <div className="font-mono text-sm font-bold text-neutral-800">
-              {domain.title} <span className="text-xs text-neutral-400 font-normal">// {domain.subTitle}</span>
+              {domain.title} <span className="text-xs text-neutral-400 font-normal font-mono">// {domain.subTitle}</span>
             </div>
             
             <p className="text-sm text-neutral-700 leading-relaxed font-sans">
               {domain.description}
             </p>
 
-            <div className="flex flex-wrap gap-2 pt-1 font-mono text-xs text-neutral-500">
+            <div className="flex flex-wrap gap-x-3 gap-y-1 pt-1 font-mono text-xs text-neutral-500">
               {domain.topics.map((t, idx) => (
                 <span key={idx}>[{t}]</span>
               ))}
