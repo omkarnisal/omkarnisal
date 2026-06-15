@@ -1,31 +1,26 @@
 import React from 'react';
 
-interface Article {
-  slug: string;
+interface TechArticle {
   title: string;
   excerpt: string;
-  date: string;
-  readTime: string;
-  topic: string;
-  content: string;
+  link: string;
 }
 
-const articles: Article[] = [
+const techArticles: TechArticle[] = [
   {
-    slug: 'template-post-slug',
-    title: 'Your Article Title Goes Here (Template)',
-    excerpt: 'This is a brief summary or excerpt of your article to display on the archive page. Keep it informative.',
-    date: 'June 03, 2026',
-    readTime: '5 min read',
-    topic: 'Embedded Systems',
-    content: `This is the main body paragraph. You can write your post content here.
-    
-    Use empty line breaks to separate paragraphs.
-    
-    1. List Item Example
-    2. Another List Item Example
-    
-    You can copy this block in the code editor to add new posts to the archive.`
+    title: 'Fueling the Engine',
+    link: 'https://medium.com/@vinusomkar/fueling-the-engine-a7427f5dd142',
+    excerpt: 'Every time we twist the throttle or press the accelerator, the engine needs to know how much fuel should be delivered for the desired power output. In older vehicles, this task was handled by a carburetor. In most modern vehicles, it is managed by an Electronic Fuel Injection (EFI) system...'
+  },
+  {
+    title: 'Electronically controlled carburetors',
+    link: 'https://medium.com/@vinusomkar/electronically-controlled-carburetors-091cff0c793c',
+    excerpt: 'In a world that has largely moved on to Electronic Fuel Injection (EFI), we are going to look back at the fascinating engineering attempts to bridge these two eras — specifically, how engineers use digital microcontrollers and high-speed solenoids to turn an analog mechanical computer into a smart, closed-loop system.'
+  },
+  {
+    title: 'Contextual xG - The xG Philosophy: "What is xG?"',
+    link: 'https://medium.com/@vinusomkar',
+    excerpt: 'An exploration of Expected Goals (xG) in football analytics, discussing the foundations of shot metrics and how incorporating spatial and situational context improves predictive accuracy over simplified event-driven models.'
   }
 ];
 
@@ -34,43 +29,57 @@ export default function WritingPage() {
     <div className="space-y-8 py-4 max-w-xl">
       <section className="space-y-2">
         <h1 className="text-xl font-bold tracking-tight text-neutral-900 font-mono">
-          Technical Notes
+          Writing
         </h1>
         <p className="text-sm text-neutral-500 font-mono">
-          Engineering ledger of firmware bugs, network models, and development logs:
+          Essays, engineering guides, and notes on embedded systems and analytics:
         </p>
       </section>
 
       <hr />
 
+      {/* Technology Blogs */}
       <section className="space-y-6">
-        {articles.map((article) => (
-          <details
-            key={article.slug}
-            className="group border border-neutral-200 rounded-lg p-4 bg-neutral-50/50 hover:bg-neutral-50 cursor-pointer block"
-          >
-            <summary className="font-mono text-sm text-neutral-800 list-none flex flex-col md:flex-row md:items-baseline md:justify-between select-none">
-              <span className="font-bold text-sm text-neutral-900 hover:underline group-open:underline block">
-                {article.title}
-              </span>
-              <span className="text-neutral-500 font-normal shrink-0 text-xs font-mono">
-                {article.date} // {article.readTime}
-              </span>
-            </summary>
-            
-            <p className="text-xs italic text-neutral-400 mt-2 font-mono">
-              Category: {article.topic}
-            </p>
+        <h2 className="text-sm font-bold font-mono text-neutral-950 uppercase tracking-wide">
+          # Technology Blogs
+        </h2>
 
-            <p className="text-sm text-neutral-700 mt-3 font-sans leading-relaxed border-t border-neutral-100 pt-3">
-              {article.excerpt}
-            </p>
-
-            <div className="text-sm text-neutral-800 mt-4 pt-4 border-t border-dashed border-neutral-200 whitespace-pre-line leading-relaxed font-sans">
-              {article.content}
+        <div className="space-y-6">
+          {techArticles.map((article, index) => (
+            <div key={index} className="space-y-2 font-mono">
+              <div className="flex justify-between items-baseline border-b border-neutral-100 pb-1">
+                <h3 className="text-sm font-bold text-neutral-800">
+                  {article.title}
+                </h3>
+              </div>
+              <p className="text-sm text-neutral-700 leading-relaxed font-sans">
+                {article.excerpt}
+              </p>
+              <div className="pt-1 text-sm">
+                <a
+                  href={article.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-neutral-500 hover:text-neutral-900"
+                >
+                  [Read on Medium →]
+                </a>
+              </div>
             </div>
-          </details>
-        ))}
+          ))}
+        </div>
+      </section>
+
+      <hr />
+
+      {/* Personal Blogs */}
+      <section className="space-y-4">
+        <h2 className="text-sm font-bold font-mono text-neutral-950 uppercase tracking-wide">
+          # Personal Blogs
+        </h2>
+        <p className="text-sm text-neutral-500 italic font-mono">
+          No entries posted yet. Check back soon.
+        </p>
       </section>
     </div>
   );
