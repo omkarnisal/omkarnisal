@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Link from 'next/link';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   title: 'Omkar Nisal | Embedded Systems Engineer',
@@ -42,6 +43,7 @@ export default function RootLayout({
         <main className="flex-1 max-w-2xl w-full mx-auto px-6 pb-20">
           {children}
         </main>
+        <SpeedInsights />
       </body>
     </html>
   );
