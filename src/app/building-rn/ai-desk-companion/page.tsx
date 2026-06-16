@@ -32,6 +32,33 @@ export default function AiDeskCompanionPage() {
 
       <hr />
 
+      {/* Prototype Gallery */}
+      <section className="space-y-3">
+        <h2 className="text-sm font-bold font-mono text-neutral-900 uppercase tracking-wide">
+          # Prototype Gallery
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="space-y-1">
+            <img 
+              src="/companion-front.jpg" 
+              alt="AI Desk Companion Front Layout" 
+              className="rounded border border-neutral-200 w-full object-cover aspect-[4/3]"
+            />
+            <span className="text-[10px] text-neutral-400 font-mono block">Fig 1: ESP32-S3, OLED, Speaker, and PAM8403 on breadboard.</span>
+          </div>
+          <div className="space-y-1">
+            <img 
+              src="/companion-wires.jpg" 
+              alt="AI Desk Companion Wires and Connections" 
+              className="rounded border border-neutral-200 w-full object-cover aspect-[4/3]"
+            />
+            <span className="text-[10px] text-neutral-400 font-mono block">Fig 2: Jumper wire connections and distribution strategy.</span>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
       {/* Architecture */}
       <section className="space-y-4 font-mono text-sm text-neutral-700">
         <h2 className="text-sm font-bold text-neutral-900 uppercase tracking-wide">
