@@ -34,7 +34,7 @@ export default function HomePage() {
         </div>
 
         <p className="text-sm text-neutral-700 leading-relaxed font-mono">
-          Embedded Firmware Engineer by profession, curious learner by nature. I work on industrial automation, embedded systems, and connected devices while constantly tinkering with ESP32s, STM32s, Raspberry Pis, and whatever development board catches my interest next. Alongside embedded systems, I'm interested in machine learning, quantitative finance, and mathematical modeling. I enjoy exploring how data, statistics, and algorithms can be used to understand complex systems, whether that's financial markets, industrial processes, or real-world decision making.
+          I work as an embedded systems engineer on industrial automation, embedded systems, and connected devices while constantly tinkering with ESP32s, STM32s, Raspberry Pis, and whatever development board catches my interest next. Alongside embedded systems, I'm interested in machine learning, quantitative finance, and mathematical modeling. I enjoy exploring how data, statistics, and algorithms can be used to understand complex systems, whether that's financial markets, industrial processes, or real-world decision making.
         </p>
 
         <div className="font-mono text-sm flex flex-wrap gap-x-4 gap-y-1 pt-2">
